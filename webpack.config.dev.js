@@ -18,6 +18,11 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin(), // 排序輸出
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('development'),
+      },
+    }),
   ],
   module: {
     loaders: [

@@ -1,0 +1,2 @@
+export const DUMMY_ACTION = 'DUMMY_ACTION';
+export const DUMMY_ACTION1 = 'DUMMY_ACTION1';
