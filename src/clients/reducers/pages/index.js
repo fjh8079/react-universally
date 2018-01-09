@@ -1,15 +1,6 @@
-import { DUMMY_ACTION } from '../../../constants';
+import { combineReducers } from 'redux';
+import moviesReducer from './movies';
 
-const initialState = {
-  id: 1,
-};
-
-export default function pagesReducer(state = initialState, action) {
-  switch (action.type) {
-    case DUMMY_ACTION:
-      return state;
-
-    default:
-      return state;
-  }
-}
+export default combineReducers({
+  movies: moviesReducer,
+});

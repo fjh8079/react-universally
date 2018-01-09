@@ -6,17 +6,15 @@ function dummyAction() {
   };
 }
 
-function searchMovie(keyword) {
+function onSearchMoviesAction(keyword) {
   return {
-    type: MOVIE_ACTION.SEARCH_MOVIE,
-    action: {
-      payload: keyword,
-    },
+    type: MOVIE_ACTION.ON_SEARCH_MOVIES,
+    payload: keyword,
   };
 }
 
 module.exports = {
   dummyAction,
-  searchMovie,
+  onSearchMoviesAction,
 };
 

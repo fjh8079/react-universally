@@ -1,7 +1,7 @@
 export const DUMMY_ACTION = 'DUMMY_ACTION';
 
 export const MOVIE_ACTION = {
-  SEARCH_MOVIE: 'SEARCH_MOVIE',
+  ON_SEARCH_MOVIES: 'ON_SEARCH_MOVIES',
 };
 
 export const MOVIE_DB = {

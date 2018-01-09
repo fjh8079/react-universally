@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Section } from '../Styled';
 
 const HeaderSection = Section.extend`
-  background-color: #FAE4D2;
+  background-color: #3A405A;
 `;
 
 const Header = styled.header`
@@ -12,9 +12,10 @@ const Header = styled.header`
 `;
 
 const StyledLink = styled(Link)`
-  color: #BF9086;
+  color: #AEC5EB;
   text-decoration: none;
   padding-right: 2rem;
+  font-size: 1rem;
 `;
 
 const Nav = () => (
