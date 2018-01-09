@@ -2,13 +2,14 @@ import React from 'react';
 import { Switch, Route } from 'react-router';
 import About from '../containers/About';
 import Todos from '../containers/Todos';
+import Movies from '../containers/Movies';
 
 const routes = [
   {
     path: '/',
     exact: true,
     key: 'root',
-    component: About,
+    component: Movies,
   },
   {
     path: '/about',
@@ -19,6 +20,11 @@ const routes = [
     path: '/todos',
     key: 'todos',
     component: Todos,
+  },
+  {
+    path: '/movies',
+    key: 'movies',
+    component: Movies,
   },
 ];
 
