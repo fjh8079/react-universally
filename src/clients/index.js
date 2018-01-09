@@ -2,8 +2,9 @@
 import React from 'react';
 import { hydrate } from 'react-dom';
 import { Provider } from 'react-redux';
+import { BrowserRouter, browserHistory } from 'react-router-dom';
 import configureStore from './store/configureStore';
-import App from './App';
+import MainRoute from './route/index';
 
 let reduxState = {};
 
@@ -18,7 +19,9 @@ const store = configureStore(reduxState);
 
 hydrate(
   <Provider store={store}>
-    <App />
+    <BrowserRouter history={browserHistory}>
+      <MainRoute />
+    </BrowserRouter>
   </Provider>,
   document.getElementById('app-mount-point'),
 );

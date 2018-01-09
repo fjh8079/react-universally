@@ -6,10 +6,11 @@ import WebpackDevMiddleware from 'webpack-dev-middleware';
 import WebpackHotMiddleware from 'webpack-hot-middleware';
 import { renderToString } from 'react-dom/server';
 import { Provider } from 'react-redux';
+import { StaticRouter } from 'react-router';
 import webpackConfig from '../webpack.config.dev';
 import configureStore from './clients/store/configureStore';
 import { renderDefaultLayout } from './server';
-import App from './clients/App';
+import MainRoute from './clients/route';
 
 const app = express();
 
@@ -33,14 +34,18 @@ if (NODE_ENV !== 'production') {
 app.use('/assets', express.static('assets'));
 
 function handleRender(req, res) {
+  const { url } = req;
   const initialState = {};
 
   // Create a new Redux store instance
   const store = configureStore(initialState);
+  const routerContext = {};
 
   const providerContent = (
     <Provider store={store}>
-      <App />
+      <StaticRouter location={url} context={routerContext}>
+        <MainRoute />
+      </StaticRouter>
     </Provider>
   );
 

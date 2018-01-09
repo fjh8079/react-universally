@@ -6,7 +6,7 @@ A react starter kit build with redux / react-router / webpack.
 ## Features
 
 * `react` as the view.
-* `react-router` v4 as the router.
+* `react-router` v4 as the router (with `react-router-dom`).
 * `redux` as the state container, and logged with `redux-logger`.
 * `express` server.
 * `Airbnb's ESlint` configuration for coding style consistency.
