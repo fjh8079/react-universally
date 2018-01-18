@@ -13,8 +13,16 @@ function onSearchMoviesAction(keyword) {
   };
 }
 
+function onGetSearchMovies(res) {
+  return {
+    type: MOVIE_ACTION.GET_SEARCH_MOVIES,
+    payload: res,
+  };
+}
+
 module.exports = {
   dummyAction,
   onSearchMoviesAction,
+  onGetSearchMovies,
 };
 

@@ -17,7 +17,7 @@ exports.get = (url, params = {}) => {
   for (let i = 0; i < keys.length; i += 1) {
     fetchUrl += `&${keys[i]}=${encodeURIComponent(values[i])}`;
   }
-  fetchUrl += '&language=zh-TW';
+  fetchUrl += '&language=zh-TW&region=TW';
 
   return new Promise((resolve, reject) => {
     superagent
