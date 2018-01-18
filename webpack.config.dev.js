@@ -5,6 +5,7 @@ module.exports = {
   devtool: 'eval',
   entry: {
     bundle: [
+      'babel-polyfill',
       'webpack-hot-middleware/client', // 跟server端確認什麼更新了 我要更新什麼
       './src/clients',
     ],

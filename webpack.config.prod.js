@@ -5,7 +5,7 @@ module.exports = {
   devtool: 'source-map', // bundle.js.map
   entry: {
     // 指定最先讀的檔案 index.js server最先讀的 client web最先讀的
-    bundle: ['./src/clients/'],
+    bundle: ['babel-polyfill', './src/clients/'],
   },
   module: {
     loaders: [

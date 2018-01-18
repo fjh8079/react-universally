@@ -2,6 +2,7 @@ export const DUMMY_ACTION = 'DUMMY_ACTION';
 
 export const MOVIE_ACTION = {
   ON_SEARCH_MOVIES: 'ON_SEARCH_MOVIES',
+  GET_SEARCH_MOVIES: 'GET_SEARCH_MOVIES',
 };
 
 export const MOVIE_DB = {

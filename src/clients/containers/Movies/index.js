@@ -15,9 +15,9 @@ class Movies extends Component {
   }
 
   onSearchMovies() {
-    const { onSearchMovies } = this.props;
+    const { dispatch } = this.props;
     const inputText = this.textInput.value;
-    onSearchMovies(inputText);
+    dispatch(onSearchMoviesAction(inputText));
   }
 
   render() {
@@ -61,7 +61,7 @@ class Movies extends Component {
 }
 
 Movies.propTypes = {
-  onSearchMovies: propTypes.func.isRequired,
+  dispatch: propTypes.func.isRequired,
   keyword: propTypes.string,
 };
 
@@ -78,12 +78,4 @@ function mapStateToProps(state) {
   };
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    onSearchMovies: (keyword) => {
-      dispatch(onSearchMoviesAction(keyword));
-    },
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Movies);
+export default connect(mapStateToProps)(Movies);
