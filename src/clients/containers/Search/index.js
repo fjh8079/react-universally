@@ -3,8 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { get as _get } from 'lodash';
 import { connect } from 'react-redux';
-import { movieItemShape } from '../../../constants/itemShape';
-import CoverBlock from '../../Components/CoverBlock';
+import CoverBlock from '../../components/CoverBlock';
 
 const Search = ({ searchResult }) => (
   <section>
@@ -13,7 +12,7 @@ const Search = ({ searchResult }) => (
 );
 
 Search.propTypes = {
-  searchResult: PropTypes.arrayOf(PropTypes.shape(movieItemShape)),
+  searchResult: PropTypes.arrayOf(PropTypes.number),
 };
 
 Search.defaultProps = {

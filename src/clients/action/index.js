@@ -20,9 +20,17 @@ function onGetSearchMovies(res) {
   };
 }
 
+function onAddToSelected(id) {
+  return {
+    type: MOVIE_ACTION.ADD_TO_SELECTED,
+    payload: id,
+  };
+}
+
 module.exports = {
   dummyAction,
   onSearchMoviesAction,
   onGetSearchMovies,
+  onAddToSelected,
 };
 

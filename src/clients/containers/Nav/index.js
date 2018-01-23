@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Section } from '../Styled';
-import SearchBar from '../../Components/SearchBar';
+import SearchBar from '../../components/SearchBar';
 
 const HeaderSection = Section.extend`
 `;

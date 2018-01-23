@@ -17,7 +17,6 @@ function* searchMovieFlow(action) {
 
 
 function* watchSearchMovie() {
-  console.log('watchSearchMovie');
   yield takeEvery(MOVIE_ACTION.ON_SEARCH_MOVIES, searchMovieFlow);
 }
 
