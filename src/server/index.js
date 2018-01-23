@@ -8,6 +8,7 @@ function renderDefaultLayout(html, preloadedState) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <link type="text/css" rel="stylesheet" href="/assets/css/normalize.css" />
+        <link type="text/css" rel="stylesheet" href="/assets/css/font.css" />
         <link type="text/css" rel="stylesheet" href="/assets/css/main.css" />
       </head>
       <body>

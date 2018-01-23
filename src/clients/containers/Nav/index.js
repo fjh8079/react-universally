@@ -2,30 +2,42 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Section } from '../Styled';
+import SearchBar from '../../Components/SearchBar';
 
 const HeaderSection = Section.extend`
-  background-color: #3A405A;
 `;
 
 const Header = styled.header`
   padding: 2rem 0;
+  border-bottom: 1px solid #4F5D75;
 `;
 
 const StyledLink = styled(Link)`
-  color: #AEC5EB;
+  color: #D0CDD7;
   text-decoration: none;
-  padding-right: 2rem;
+  padding: 0 1rem;
   font-size: 1rem;
+  line-height: 40px;
+  &:hover {
+    color: #FFF;
+  }
+`;
+
+const NavStyle = styled.nav`
+  display: inline-block;
+  float: left;
 `;
 
 const Nav = () => (
   <HeaderSection>
     <Header className="nav">
-      <nav>
+      <NavStyle>
         <StyledLink to="/">Home</StyledLink>
-        <StyledLink to="/about">About</StyledLink>
-        <StyledLink to="/todos">todos</StyledLink>
-      </nav>
+        <StyledLink to="/search">Search</StyledLink>
+        <StyledLink to="/selected">Selected Movie</StyledLink>
+      </NavStyle>
+      <SearchBar />
+      <div className="clearall" />
     </Header>
   </HeaderSection>
 );
